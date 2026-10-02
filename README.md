@@ -1,86 +1,66 @@
-# BharatUI - Empowering Aatmanirbhar Design
+# e2b-project — BharatUI Landing Page
 
-BharatUI brings components, not complexity. It's a modern UI library built for developers who want to create beautiful interfaces without the overhead.
+A dark, modern landing page for **BharatUI** ("components, not complexity") — an Aatmanirbhar-inspired UI library pitch. Built with React + Vite + Tailwind CSS.
 
-## 🌟 About
+Live demo: https://e2b-project.pages.dev
 
-BharatUI is a lightweight, fast, and customizable UI component library designed to power Aatmanirbhar (self-reliant) design systems. Built on Web Components and powered by Lit, it fits into any codebase with zero overhead, no build step, and full composability.
+## Features
 
-## 🚀 Quick Start
+- Dark-theme hero landing page with header, hero, features, terminal, social proof, and footer sections
+- Responsive Tailwind CSS layout
+- Zero backend — pure static SPA
 
-Install BharatUI with npm:
+## Tech Stack
 
-```bash
-npm i bharat-ui
-```
+- React 18 (JSX)
+- Vite 4
+- Tailwind CSS + PostCSS + Autoprefixer
 
-Or using yarn:
-
-```bash
-yarn add bharat-ui
-```
-
-## 📦 Features
-
-- **Lightweight**: Minimal overhead for your applications
-- **Fast**: Optimized performance for modern web applications
-- **Customizable**: Easily themeable components to match your brand
-- **Framework Agnostic**: Works with any JavaScript framework or vanilla JS
-- **Web Components**: Built on native web standards
-- **Zero Build Step**: Drop-in components with no compilation required
-
-## 🛠️ Tech Stack
-
-- React
-- Vite
-- TailwindCSS
-- PostCSS
-- Web Components (Lit)
-
-## 📁 Project Structure
-
-```
-src/
-├── components/
-│   ├── Features.jsx
-│   ├── Footer.jsx
-│   ├── Header.jsx
-│   ├── Hero.jsx
-│   ├── SocialProof.jsx
-│   └── Terminal.jsx
-├── App.jsx
-├── index.css
-└── main.jsx
-```
-
-## ▶️ Development
-
-To run the project locally:
+## Quick Start
 
 ```bash
-npm run dev
+git clone https://github.com/girishlade111/e2b-project.git
+cd e2b-project
+npm install --legacy-peer-deps
+npm run dev       # http://localhost:5173
 ```
 
-To build for production:
+## Project Structure
+
+```
+e2b-project/
+├── index.html
+├── vite.config.js
+├── tailwind.config.js
+├── postcss.config.js
+└── src/
+    ├── main.jsx
+    ├── App.jsx
+    ├── index.css
+    └── components/
+        ├── Header.jsx
+        ├── Hero.jsx
+        ├── Features.jsx
+        ├── Terminal.jsx
+        ├── SocialProof.jsx
+        └── Footer.jsx
+```
+
+## Deploy
+
+Static SPA — build and host `dist/` anywhere:
 
 ```bash
 npm run build
 ```
 
-To preview the production build:
+- **Cloudflare Pages** (current) — project `e2b-project`, build command `npm run build`, output `dist/`
+- Netlify / Vercel / GitHub Pages — same build, zero extra config
 
-```bash
-npm run preview
-```
+## License
 
-## 📖 Documentation
+MIT — free to use and adapt.
 
-For full documentation, visit [BharatUI Documentation](https://www.bharatui.com/guides/getting-started/)
+---
 
-## 🤝 Contributing
-
-We welcome contributions to BharatUI! Please see our contributing guidelines for details on how to get involved.
-
-## 📄 License
-
-MIT © Girish Lade
+Built by [Girish Lade](https://ladestack.in)
