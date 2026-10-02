@@ -1,66 +1,69 @@
 # e2b-project — BharatUI Landing Page
 
-A dark, modern landing page for **BharatUI** ("components, not complexity") — an Aatmanirbhar-inspired UI library pitch. Built with React + Vite + Tailwind CSS.
+A dark, modern marketing landing page for **BharatUI** — a lightweight, framework-agnostic UI component library for "Aatmanirbhar" (self-reliant) design systems.
 
-Live demo: https://e2b-project.pages.dev
+The page features an orange-gradient hero, a features showcase, an **interactive terminal demo** (type `help` to see available commands like `components`, `install`, `docs`), a social-proof section, and a footer — all styled with Tailwind CSS.
+
+Built by Girish Lade — https://ladestack.in
 
 ## Features
 
-- Dark-theme hero landing page with header, hero, features, terminal, social proof, and footer sections
-- Responsive Tailwind CSS layout
-- Zero backend — pure static SPA
+- Responsive hero section with animated gradient headline
+- Interactive in-browser terminal demo of BharatUI commands
+- Features showcase grid
+- Social proof section
+- Dark theme with orange accent palette
+- E2B-compatible Vite dev-server config (host `0.0.0.0`, strict port 5173, allowed hosts for `.e2b.app`)
 
 ## Tech Stack
 
-- React 18 (JSX)
-- Vite 4
-- Tailwind CSS + PostCSS + Autoprefixer
+- React 18.2
+- Vite 4.3
+- Tailwind CSS 3.3
+- PostCSS + Autoprefixer
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/girishlade111/e2b-project.git
-cd e2b-project
-npm install --legacy-peer-deps
-npm run dev       # http://localhost:5173
+npm install
+npm run dev      # serves on http://localhost:5173
 ```
+
+## Build & Deploy
+
+Fully static client-side app — no environment variables, no server-side code:
+
+```bash
+npm run build    # outputs to dist/
+```
+
+Deploy `dist/` to Cloudflare Pages, Netlify, GitHub Pages, or any static host.
 
 ## Project Structure
 
 ```
 e2b-project/
-├── index.html
-├── vite.config.js
+├── index.html              # Entry HTML
+├── src/
+│   ├── main.jsx            # React entry point
+│   ├── App.jsx             # Page layout composition
+│   ├── index.css           # Tailwind + global styles
+│   └── components/
+│       ├── Header.jsx
+│       ├── Hero.jsx
+│       ├── Features.jsx
+│       ├── Terminal.jsx    # Interactive terminal demo
+│       ├── SocialProof.jsx
+│       └── Footer.jsx
 ├── tailwind.config.js
 ├── postcss.config.js
-└── src/
-    ├── main.jsx
-    ├── App.jsx
-    ├── index.css
-    └── components/
-        ├── Header.jsx
-        ├── Hero.jsx
-        ├── Features.jsx
-        ├── Terminal.jsx
-        ├── SocialProof.jsx
-        └── Footer.jsx
+└── vite.config.js
 ```
 
-## Deploy
+## Deploy Notes
 
-Static SPA — build and host `dist/` anywhere:
-
-```bash
-npm run build
-```
-
-- **Cloudflare Pages** (current) — project `e2b-project`, build command `npm run build`, output `dist/`
-- Netlify / Vercel / GitHub Pages — same build, zero extra config
+- E2B sandbox dev config is included in `vite.config.js` (host/allowedHosts); safe to ignore on other hosts.
 
 ## License
 
-MIT — free to use and adapt.
-
----
-
-Built by [Girish Lade](https://ladestack.in)
+Open for personal and educational use.
